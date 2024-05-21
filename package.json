@@ -1,0 +1,13 @@
+{
+  "name": "batmans_btp_tool",
+  "version": "1.0.0",
+  "description": "<i>Why be an ordinary developer - when you can be Batman?</i>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "batman" : ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
