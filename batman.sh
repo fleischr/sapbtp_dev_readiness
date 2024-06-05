@@ -5,16 +5,6 @@ command_exists () {
     command -v "$1" >/dev/null 2>&1
 }
 
-open_cli_docs () {
-    # Determine the operating system and open the URL in the default web browser
-    case "$OSTYPE" in
-    linux*)   xdg-open "$URL" ;; 
-    darwin*)  open "$URL" ;; 
-    cygwin*|msys*|win32*) start "$URL" ;; 
-    *)        echo "Unsupported OS: $OSTYPE" ;;
-    esac
-}
-
 pipechar="|"
 
 # Text colors
@@ -26,15 +16,6 @@ MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
 RESET="\e[0m"
-
-# Background colors
-BG_RED="\e[41m"
-BG_GREEN="\e[42m"
-BG_YELLOW="\e[43m"
-BG_BLUE="\e[44m"
-BG_MAGENTA="\e[45m"
-BG_CYAN="\e[46m"
-BG_WHITE="\e[47m"
 
 # Text attributes
 BOLD="\e[1m"
@@ -213,10 +194,21 @@ fi
 echo ""
 
 kubernetes_installed=0
+oidclogin_installed=0
 if command_exists kubectl; then
     echo -e "${GREEN}Kubernetes is installed.${RESET}"
     kubectl version
     kubernetes_installed=1
+
+# If kubectl is installed also check if kubernetes oidc login plugin is installed (prerequiste for login to Kyma clusters)
+# We directly check the version of the oidc-login plugin as it is not a standalone command
+    if kubectl oidc-login --version >/dev/null 2>&1 ; then
+        echo -e "${GREEN}Kubernetes OIDC login is installed.${RESET}"
+        kubectl oidc-login --version
+        oidclogin_installed=1
+    else
+        echo -e "${RED}Kubernetes OIDC login is not installed.${RESET}"
+    fi
 else
     echo -e "${RED}Kubernetes is not installed.${RESET}"
 fi
@@ -249,7 +241,7 @@ else
 fi
 
 show_muscle=0
-if ([ "$show_batman" -eq 1 ] && [ "$openssl_installed" -eq 1 ] && [ "$docker_installed" -eq 1 ] && [ "$kubernetes_installed" -eq 1 ] && [ "$golang_installed" -eq 1 ] && [ "$terraform_installed"  -eq 1 ] ); then
+if ([ "$show_batman" -eq 1 ] && [ "$openssl_installed" -eq 1 ] && [ "$docker_installed" -eq 1 ] && [ "$kubernetes_installed" -eq 1 ] && [ "$oidclogin_installed" -eq 1 ] && [ "$golang_installed" -eq 1 ] && [ "$terraform_installed"  -eq 1 ] ); then
     show_muscle=1
 fi
 
@@ -441,6 +433,10 @@ else
 
     if [ "$kubernetes_installed" -eq 0 ]; then
         echo "Install Kubernetes"
+    fi
+
+    if [ "$oidclogin_installed" -eq 0 ]; then
+        echo "Install Kubernetes OIDC Plugin"
     fi
 
     if [ "$golang_installed" -eq 0 ]; then
