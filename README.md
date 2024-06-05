@@ -9,7 +9,11 @@ If you get the bat signal - you have all the tools I consider to be necessary to
 
 ## Command line tools checked for (and why they're included!)
 
-I've ranked the tools into phases. Phases I-III: Basic BTP Development / administration. Phase IV: Advanced Cloud-native development/architecture. Phase V: Gigachad innovator
+I've ranked the tools into phases. 
+
+Phases I-III: Basic BTP Development / administration. 
+Phase IV: Advanced Cloud-native development/architecture. 
+Phase V: Gigachad innovator
 
 To acquire the bat-signal, you will need to have these CLIs and other tools ready from phases I-III. 
 
@@ -38,17 +42,18 @@ The Node.js Package Manager. This manages installation of 3rd party modules from
 
 ### Phase II
 
-Adds CLI tools globally via NPM. These add some commonly used tooling for building apps for SAP BTP on your local machine. Starting to use these tools makes you a faster, more productive developer. You feel new powers as you do more and more in the command line!
+In Phase II - you take flight with more command line tools that you can add easily via NPM. These add some commonly used tooling for building apps for SAP BTP on your local machine - but a few here are just as beneficial to your existing classic ABAP and SAP Gateway apps. Starting to use CLI tools begins to makes you a faster, more productive developer. You feel new powers as you do more and more in the command line!
 
 <b>Yeoman</b></br>
-Yeoman is hand for automated creation of Fiori and SAP BTP apps
+Yeoman is handy for automated creation of Fiori and SAP BTP apps. When you use template wizards - this is what executes in the background.
 </br>
 
 <b>UI5 CLI</b></br> 
+The UI5 CLI is a tool for modernizing SAPUI5 development - and it can be used for existing SAPUI5 apps developed for your SAP Gateway system as well as SAP BTP
 </br>
 
 <b>MTA tools MBT </b></br>
-For SAP BTP apps, you tend to have frontend and backend components deployed. Their deployments are deployed together as multi-target applications. If you haven't used it much - ```mbt build``` is going to be a really frequently used command for you BTP dev!
+For SAP BTP apps, you tend to have frontend and backend components deployed. Their deployments are deployed together as multi-target applications. If you haven't used it much yet - ```mbt build``` is going to be a really frequently used command for you BTP dev!
 </br>
 
 <b>abaplint</b></br>
@@ -85,11 +90,11 @@ Java is used for some SAP applications. Many SAP developers otherwise tend to ne
 
 Keep in mind - there are multiple open source providers of Java installation. If you have any Oracle licensing issues - consider Amazon Corretto or OpenJDK.
 
-I have more details on that in my Eclipe Install guide.
+I have more details on that in my <a href="https://docs.google.com/document/d/1qesuVHcmaMRzxYcC0HwWObYoImjjG9TVtnVqN-yPLYY/edit?usp=sharing">Eclipse Install guide.</a>
 </br>
 
 <b>SQLite</b></br>
-SQLite is commonly used as a database for all kinds of apps. In SAP BTP - it may be used for hosting sap CAP dbs in development. (Fun fact: SQLite is actually the most widely deployed database in the world!)
+SQLite is commonly used as a database for all kinds of apps. In SAP BTP - it may be used for hosting sap CAP dbs in development. Fun fact: SQLite is actually the most widely deployed database in the world! And now that you have it - you'll find it handy for all kinds of other non-SAP development.
 </br>
 
 At the completion of Phase III - you earn the bat signal! 

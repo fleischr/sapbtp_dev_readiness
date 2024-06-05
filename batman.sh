@@ -179,7 +179,16 @@ else
 fi
 echo ""
 
-echo -e "${BOLD} Phase IV : Checking for SAP BTP tools used for Kyma, DevSecOps, and IaaS ${RESET}"
+sqlite_installed=0
+if command_exists sqlite3; then
+    echo -e "${GREEN}SQLite is installed.${RESET}"
+    sqlite3 --version
+    sqlite_installed=1
+else
+    echo -e "${RED}SQLite is not installed.${RESET}"
+fi
+
+echo -e "${BOLD} Phase IV : Checking for SAP BTP tools used for Kyma, DevSecOps, IaaS, and containerized apps ${RESET}"
 
 # Check if openssl is installed
 openssl_installed=0
@@ -233,7 +242,7 @@ else
 fi
 echo ""
 
-if ([ "$cf_installed" -eq 1 ] && [ "$btpcli_installed" -eq 1 ] && [ "$python_installed" -eq 1 ] && [ "$pip_installed" -eq 1 ] && [ "$java_installed" -eq 1 ] ); then
+if ([ "$cf_installed" -eq 1 ] && [ "$btpcli_installed" -eq 1 ] && [ "$python_installed" -eq 1 ] && [ "$pip_installed" -eq 1 ] && [ "$java_installed" -eq 1 ] && [ "$sqlite_installed" -eq 1 ]); then
     show_batman=1
 else
     show_batman=0
@@ -259,7 +268,7 @@ if [ "$show_batman" -eq 1 ]; then
     echo ""
 
     if [ "$show_muscle" -eq 1 ]; then
-    echo -e "${CYAN} And you installed all the other Phase IV CLIs for Kubernetes, Kyma, DevSecOps, and IaaS? You really went the extra mile. I'm impressed!${RESET}"
+    echo -e "${CYAN} And you installed all the other Phase IV CLIs for Kubernetes, Kyma, DevSecOps, containerized apps and IaaS? You really went the extra mile. I'm impressed!${RESET}"
     echo -e "\e[36m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⠿⡏⢿⡟⠿⠁⢸⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
@@ -332,12 +341,12 @@ if [ "$show_batman" -eq 1 ]; then
     fi
     echo "~"
 
-    hardhat_exists=0
-    if command_exists hardhat; then
+    geth_exists=0
+    if command_exists geth; then
         hardhat_exists=1
-        echo -e "Yes officer? It's this guy. He installed HARDHAT!"
+        echo -e "Whoah! you got geth? You can connect to EVM blockchains natively? cool!"
     else
-        echo -e "Try the Hardhat CLI sometime for smart contracts/blockchain :)"
+        echo -e "Try the Geth CLI sometime for Ethereum smart contracts/blockchain :)"
     fi
     echo "~"
 
