@@ -5,7 +5,7 @@ Clone/download this repo. Open bash command line and run
 
 ```./batman```
 
-If you get the bat signal - you have all the tools I consider to be necessary to be a productive SAP BTP developer / adminstrator. A good follow up once you have them installed is to read ""
+If you get the bat signal - you have all the tools I consider to be necessary to be a productive SAP BTP developer / administrator. A good follow up once you have them installed is to read ""
 
 ## Command line tools checked for (and why they're included!)
 
@@ -23,8 +23,7 @@ Phase V is a bonus round for exploring additional cloud-native platforms and too
 
 If you feel stuck - go back to the earlier phase.
 
-
-### Phase I 
+### Phase I
 
 Basic readiness: Git and Node.js/NPM. These are essential to get a very simple SAP BTP app up and running.
 
@@ -57,17 +56,16 @@ For SAP BTP apps, you tend to have frontend and backend components deployed. The
 </br>
 
 <b>abaplint</b></br>
-If you know you know! abaplint is a tool for evaluating code quality of abapGit repositories. While less related to BTP development per se - it helps you achive the broader goal of clean core.
+If you know you know! abaplint is a tool for evaluating code quality of abapGit repositories. While less related to BTP development per se - it helps you achieve the broader goal of clean core.
 </br>
 
 <b>CAP CDS</b></br>
 Sure you could learn to build CAP by clicking buttons in Business App Studio or SAP Build Code. But you'd be missing a lot! The CDS command line can help you build a cloud native app or integration for SAP very fast. And it's really quite essential to use for building CAP applications in JavaScript/TypeScript generally.
 </br>
 
-
 ### Phase III
 
-Phase III evaluates your basic capability to deploy / adminster apps and work across multiple types of environments. These tools take a bit more effort to manage and use the first time - but are still simple. On Windows - you may be editing some system environment or path variables or running elevated command prompts to bring all these tools online. 
+Phase III evaluates your basic capability to deploy / administer apps and work across multiple types of environments. These tools take a bit more effort to manage and use the first time - but are still simple. On Windows - you may be editing some system environment or path variables or running elevated command prompts to bring all these tools online. 
 
 <b>Cloud Foundry Tools</b></br>
 The Cloud Foundry CLI is used by BTP developers and admins to deploy apps and monitor the Cloud Foundry environments
@@ -122,7 +120,7 @@ On SAP BTP - the Kyma project presents a set of standard tooling for K8s on SAP 
 </br>
 
 <b>Terraform</b></br>
-Terraform is Infrastructure as Code (IaC). This allows you save and version your infrastructure configuration in a machine-readable format rather than a long word doc of screenshots and instructions. This can greatly acclerate your BTP rollout! I recommend checking out the <a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a> and the <a href="https://github.com/SAP-samples/btp-genai-starter-kit">Generative AI starter kit</a> as highlight examples.
+Terraform is Infrastructure as Code (IaC). This allows you save and version your infrastructure configuration in a machine-readable format rather than a long word doc of screenshots and instructions. This can greatly accelerate your BTP rollout! I recommend checking out the <a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a>, the <a href="https://github.com/SAP/terraform-provider-cloudfoundry">Terraform provider for Cloud Foundry</a> and the <a href="https://github.com/SAP-samples/btp-genai-starter-kit">Generative AI starter kit</a> as highlight examples.
 
 ### Phase V Easter eggs!
 
@@ -135,5 +133,3 @@ The innovation doesn't end there though! I've curated some checks for other tool
 ### Contributing
 
 If there's command line tools you think I overlooked for SAP BTP developers - feel free to open an issue or pull request to add them.
-
-
