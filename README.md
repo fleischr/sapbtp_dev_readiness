@@ -1,19 +1,30 @@
 # The "Batman Test" for SAP BTP Development CLI, SDKs, and other Automation Tools
 
 ## How to use
-Clone/download this repo. Open bash command line and run
 
-```./batman```
+Clone/download this repo. Depending on your Operating system, you have the following options:
+
+- On **Windows** (or any other OS that supports PowerShell), open PowerShell and run the following command:
+
+    ```pwsh
+    .\batman.ps1
+    ```
+
+- On MacOs or Linux, open bash command line and run
+
+    ```bash
+    ./batman
+    ```
 
 If you get the bat signal - you have all the tools I consider to be necessary to be a productive SAP BTP developer / administrator. A good follow up once you have them installed is to read ""
 
 ## Command line tools checked for (and why they're included!)
 
-I've ranked the tools into phases. 
+I've ranked the tools into phases.
 
-Phases I-III: Basic BTP Development / administration. 
-Phase IV: Advanced Cloud-native development/architecture. 
-Phase V: Gigachad innovator
+- Phases I-III: Basic BTP Development / administration.
+- Phase IV: Advanced Cloud-native development/architecture.
+- Phase V: Gigachad innovator.
 
 To acquire the bat-signal, you will need to have these CLIs and other tools ready from phases I-III. 
 
@@ -84,7 +95,7 @@ PIP is the package manager for Python. It can sometimes be easily missed during 
 </br>
 
 <b>Java</b></br>
-Java is used for some SAP applications. Many SAP developers otherwise tend to need to install Java in order to use Eclipe and ABAP Developer Tools. All the more important as for ABAP Steampunk Eclipse ADT is the only officially supported IDE (no SE80!).
+Java is used for some SAP applications. Many SAP developers otherwise tend to need to install Java in order to use Eclipse and ABAP Developer Tools. All the more important as for ABAP Steampunk Eclipse ADT is the only officially supported IDE (no SE80!).
 
 Keep in mind - there are multiple open source providers of Java installation. If you have any Oracle licensing issues - consider Amazon Corretto or OpenJDK.
 
@@ -100,7 +111,7 @@ At the completion of Phase III - you earn the bat signal!
 ### Phase IV
 
 Phase IV checks for other advanced tools for cloud native development, Kyma/Kubernetes, infrastructure, and DevSecOps on SAP BTP.
-<i>Maybe</i> out of scope for some very basic SAP BTP implementations - but important building apps and integrations with high transaction volume and resilient infrastructure. Even if you don't use quite all of it right away - its good to have awareness of.
+*Maybe* out of scope for some very basic SAP BTP implementations - but important building apps and integrations with high transaction volume and resilient infrastructure. Even if you don't use quite all of it right away - its good to have awareness of.
 
 <b>Golang</b></br>
 Golang as programming language is quietly becoming just a frequently used as Java, JavaScript, and Python in SAP's BTP code samples. Why? Because Golang is at the forefront of cloud native apps beyond the SAP world. Golang is also frequently used for scripting CI/CD with Jenkins.
