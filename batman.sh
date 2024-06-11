@@ -8,18 +8,18 @@ command_exists () {
 pipechar="|"
 
 # Text colors
-RED="\e[31m"
-GREEN="\e[32m"
-YELLOW="\e[33m"
-BLUE="\e[34m"
-MAGENTA="\e[35m"
-CYAN="\e[36m"
-WHITE="\e[37m"
-RESET="\e[0m"
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+BLUE="\033[34m"
+MAGENTA="\033[35m"
+CYAN="\033[36m"
+WHITE="\033[37m"
+RESET="\033[0m"
 
 # Text attributes
-BOLD="\e[1m"
-UNDERLINE="\e[4m"
+BOLD="\033[1m"
+UNDERLINE="\033[4m"
 
 echo -e "${BOLD} Phase I: Checking for Git, Node, and NPM ${RESET}"
 echo ""
@@ -132,6 +132,10 @@ python_installed=0
 if command_exists py; then
     echo -e "${GREEN}Python is installed.${RESET}"
     py --version
+    python_installed=1
+elif command_exists python3; then
+    echo -e "${GREEN}Python is installed.${RESET}"
+    python3 --version
     python_installed=1
 else
     echo -e "${RED}Python is not installed.${RESET}"
