@@ -1,3 +1,4 @@
+﻿[Console]::OutputEncoding = [Text.Encoding]::UTF8
 
 Write-Host "Equipping SAP BTP Development CLIs..."
 
@@ -182,7 +183,7 @@ else {
 
 Write-Host ""
 Write-Host "****************************************************" -ForegroundColor Blue
-Write-Host "Phase IV : Checking for SAP BTP tools used for Kyma, DevSecOps, IaaS, and containerized appsWrite-Host" -ForegroundColor Blue
+Write-Host "Phase IV : Checking for SAP BTP tools used for Kyma, DevSecOps, IaaS, and containerized apps" -ForegroundColor Blue
 Write-Host "****************************************************" -ForegroundColor Blue
 Write-Host ""
 
@@ -288,23 +289,39 @@ if ("$show_batman" -eq 1 ) {
     Write-Host ""
 }
 
+
+$container_muscle = @"
+              ████████                          
+            ██░░░░░░░░██                        
+          ██░░░░░░██░░██                        
+        ██░░░░░░██░░░░░░██                      
+        ██░░░░░░██░░░░░░██                      
+        ██░░░░░░░░██████                        
+        ██░░░░░░██                              
+        ██░░░░██                                
+      ██░░░░░░██                                
+      ██░░░░░░██                                
+    ██░░░░░░░░██                                
+    ██░░░░░░░░██                                
+    ██░░░░░░░░██          ██████████            
+  ██░░░░░░░░░░██      ████░░░░░░░░░░████        
+  ██░░░░░░░░░░██    ██░░░░░░░░░░░░░░░░░░██      
+  ██░░░░░░░░░░██  ██░░░░░░░░░░░░░░░░░░░░░░██    
+  ██░░░░░░░░░░████░░░░░░░░░░░░░░░░░░░░░░░░░░██  
+  ██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+  ██░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+  ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+  ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  
+  ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██    
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██████      
+████████████░░░░░░░░░░░░░░██████████            
+            ██████████████                    
+"@
+
 if ( "$show_muscle" -eq 1 ) {
     Write-Host "And you installed all the other Phase IV CLIs for Kubernetes, Kyma, DevSecOps, containerized apps and IaaS? You really went the extra mile. I'm impressed!" -ForegroundColor Cyan
-    Write-Host "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⠿⡏⢿⡟⠿⠁⢸⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣁⣀⡀⢠⣶⠶⠀⠁⣽⣿⣆⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠘⣿⣿⣷⡀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣆⠀⠀⠀⠀
-    ⠀⠀⢀⣠⣴⣶⣶⣶⣦⣄⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⣼⣿⣿⣿⣿⣧⠀⠀⠀
-    ⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣐⢾⣿⣿⣿⣿⣷⣦⣌⡻⣿⣿⣿⣿⣿⣧⠀⠀
-    ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⡇⠀
-    ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢋⡉⠛⠿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⡇⠀
-    ⠀⣿⣿⣿⣿⣿⣿⣿⣿⡏⢠⣿⣿⣷⡦⠀⣈⣉⣀⣤⣶⣿⣟⣛⠛⠛⠛⠛⠃⠀
-    ⠀⣿⣿⣿⣿⣿⣿⣿⡿⠀⠾⠛⠋⠁⠐⠺⠿⠿⠿⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀
-    ⠀⣿⣿⣿⣿⣿⣿⠟⢁⣴⣶⣾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⣿⣿⣿⣿⠿⠋⣰⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠛⠛⠋⠁⠐⠛⠛⠛⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" -ForegroundColor Cyan
+    Write-Host ""
+    Write-Host $container_muscle -ForegroundColor Cyan
 }
 
 Write-Host ""
@@ -319,7 +336,7 @@ if (Get-Command gcloud -ErrorAction SilentlyContinue) {
     Write-Host "You got Google Cloud CLI? Nice!"
 }
 else {
-    Write-Host "Try the Google Cloud CLI sometime :)"
+    Write-Host "Try the Google Cloud CLI sometime :D"
 }
 
 Write-Host "~"
@@ -330,7 +347,7 @@ if (Get-Command aws -ErrorAction SilentlyContinue) {
     Write-Host "You got AWS CLI? Nice!"
 }
 else {
-    Write-Host "Try the AWS CLI sometime :)"
+    Write-Host "Try the AWS CLI sometime :D"
 }
 
 Write-Host "~"
@@ -341,7 +358,7 @@ if (Get-Command az -ErrorAction SilentlyContinue) {
     Write-Host "You got Azure CLI? Nice!"
 }
 else {
-    Write-Host "Try the Azure CLI sometime :)"
+    Write-Host "Try the Azure CLI sometime :D"
 }
 
 Write-Host "~"
@@ -352,7 +369,7 @@ if (Get-Command ibmcloud -ErrorAction SilentlyContinue) {
     Write-Host "You got IBM Cloud CLI? Nice!"
 }
 else {
-    Write-Host "Try the IBM Cloud CLI sometime :)"
+    Write-Host "Try the IBM Cloud CLI sometime :D"
 }
 
 Write-Host "~"
@@ -363,7 +380,7 @@ if (Get-Command oc -ErrorAction SilentlyContinue) {
     Write-Host "You got Openshift? You are true cloud pro!"
 }
 else {
-    Write-Host "Try the Red Hat Open Shift CLI sometime for cnative apps :)"
+    Write-Host "Try the Red Hat Open Shift CLI sometime for cnative apps :D"
 }
 
 Write-Host "~"
@@ -373,7 +390,7 @@ if (Get-Command nats -ErrorAction SilentlyContinue) {
     $nats_exists = 1
 }
 else {
-    Write-Host "Try the NATs CLI sometime for edge compute :)"
+    Write-Host "Try the NATs CLI sometime for edge compute :D"
 }
 
 Write-Host "~"
@@ -384,7 +401,7 @@ if (Get-Command geth -ErrorAction SilentlyContinue) {
     Write-Host "Whoah! you got geth? You can connect to EVM blockchains natively? cool!"
 }
 else {
-    Write-Host "Try the Geth CLI sometime for Ethereum smart contracts/blockchain :)"
+    Write-Host "Try the Geth CLI sometime for Ethereum smart contracts/blockchain :D"
 }
 
 Write-Host "~"
@@ -406,7 +423,7 @@ if (Get-Command rustup -ErrorAction SilentlyContinue) {
     Write-Host "aha. you like rust too?"
 }
 else {
-    Write-Host "Try building in Rust someday :)"
+    Write-Host "Try building in Rust someday :D"
 }
 
 Write-Host "~"
@@ -417,7 +434,7 @@ if (Get-Command cargo -ErrorAction SilentlyContinue) {
     Write-Host "Glad you got cargo too. Rust is good! I'd build SAP T/5 HANA with it - but thats just my opinion"
 }
 else {
-    Write-Host "Let me remind you again : Try building in Rust someday :)"
+    Write-Host "Let me remind you again : Try building in Rust someday :D"
 }
 
 Write-Host "~"
@@ -429,27 +446,26 @@ if ( "$gcloud_exists" -eq 1 -and "$aws_exists" -eq 1 -and "$azure_exists" -eq 1 
     
 Write-Host ""
 
-if ( "$show_gigachad" -eq 1 ) {
-    Write-Host "AND YOU GOT ##ALL## THE SECRET ONES TOO?!? You are a ..."
-    Write-Host ""
-    Write-Host "~ c e r t i f i e d ~"
-    Write-Host "
-    
+
+$gigachad = @"
 ██████╗ ██╗ ██████╗  █████╗  ██████╗██╗  ██╗ █████╗ ██████╗ 
 ██╔════╝ ██║██╔════╝ ██╔══██╗██╔════╝██║  ██║██╔══██╗██╔══██╗
 ██║  ███╗██║██║  ███╗███████║██║     ███████║███████║██║  ██║
 ██║   ██║██║██║   ██║██╔══██║██║     ██╔══██║██╔══██║██║  ██║
 ╚██████╔╝██║╚██████╔╝██║  ██║╚██████╗██║  ██║██║  ██║██████╔╝
 ╚═════╝ ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
-    "
+"@
+
+if ( "$show_gigachad" -eq 1 ) {
+    Write-Host "AND YOU GOT ##ALL## THE SECRET ONES TOO?!? You are a ..."
+    Write-Host ""
+    Write-Host "~ c e r t i f i e d ~"
+    Write-Output $gigachad
     Write-Host ""
 }
-    
 
-    
-
-else {
-    Write-Host " You're almost there! There's just a few things you should check" -ForegroundColor Magenta
+if ( "$show_batman" -eq 0 ) {
+    Write-Host " You're almost there! There are just a few things you should check" -ForegroundColor Magenta
     Write-Host "████████ ██████  ██    ██      █████   ██████   █████  ██ ███    ██  " -ForegroundColor Magenta
     Write-Host "   ██    ██   ██  ██  ██      ██   ██ ██       ██   ██ ██ ████   ██  " -ForegroundColor Magenta
     Write-Host "   ██    ██████    ████       ███████ ██   ███ ███████ ██ ██ ██  ██  " -ForegroundColor Magenta
