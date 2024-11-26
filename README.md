@@ -24,7 +24,7 @@ I've ranked the tools into phases.
 
 - Phases I-III: Basic BTP Development / administration.
 - Phase IV: Advanced Cloud-native development/architecture.
-- Phase V: Gigachad innovator.
+- Phase V: Gigachad cloud innovator.
 
 To acquire the bat-signal, you will need to have these CLIs and other tools ready from phases I-III. 
 
